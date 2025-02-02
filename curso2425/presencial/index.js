@@ -8,10 +8,11 @@ let preguntaIndex = 0;
 
 //función para consultar las preguntas
 async function consultaPregunta() {
-  let respuesta = await fetch(url);
-  let respuestaJSON = await respuesta.json();
+  let respuesta = await fetch(url); //cogemos url del api
+  let respuestaJSON = await respuesta.json(); //lo recojo con json y lo instroduzco en una variable
 
   if (respuestaJSON.results && respuestaJSON.results.length > 0) {
+    ///si hay preguntas, la mostramos
     preguntas = respuestaJSON.results;
     mostrarPregunta();
   }
@@ -80,5 +81,5 @@ function verificarRespuesta(seleccionada, correcta) {
   // Muestro la puntuación
   document.getElementById("puntua").textContent = `Puntuación: ${resultado}`;
 }
-
+//llamamos al metodo , y cnsultamos las preguntas para luego mostrarlas.
 consultaPregunta();
