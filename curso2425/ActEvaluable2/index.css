@@ -1,0 +1,66 @@
+
+body {
+    font-family:'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+  }
+
+  .titulo{
+    font-size:200%;
+    color: black;
+  }
+  .cabecera {
+    background-color: rgba(8, 8, 8, 0.295);
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  .filtros {
+    margin: 10px;
+    display: flex;
+    
+  }
+
+  #precio_minimo{
+    margin-right: 150px;
+  }
+
+
+  #categoria{
+    margin-right: 150px;
+  }
+
+  #marca{
+    margin-right: 150px;
+  }
+
+  .productoCarrito {
+    display: flex; 
+    margin-right: 10%;
+  }
+  
+  .productos {
+    flex: 1; 
+    padding: 10px; 
+  }
+  .producto {
+
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .producto img {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+
+  
+
+  
