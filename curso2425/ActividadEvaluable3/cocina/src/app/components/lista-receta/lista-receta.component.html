@@ -1,0 +1,54 @@
+<div class="container text-center">
+  <h1 class="titulo mt-3">Recetario de cocina</h1>
+  <div class="row row-cols-2 gx-4">
+    <div class="col mt-4">
+      <div class="imagen">
+        <img [src]="url" />
+      </div>
+      <div class="texto mt-2">
+        <p>
+          Encuentra recetas rápidas, deliciosas y fáciles de preparar. Usa el
+          buscador o filtra por categoría para encontrar justo lo que necesitas.
+          ¡Hoy puede ser un gran día para probar distintos sabores!
+        </p>
+      </div>
+    </div>
+    <div class="col mt-4">
+      <div class="imagen">
+        <img [src]="url1" />
+      </div>
+      <div class="texto mt-2">
+        <p>
+          Viaja por el mundo sin salir de casa. Explora nuestra selección de
+          recetas y descubre lo mejor de cada región en cada bocado.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- En el siguiente formulario hay que indicar la categoría del alimento que se desee-->
+<div class="container py-5">
+  <form class="mx-auto text-center">
+    <h2 class="mb-3">Formulario</h2>
+    <p class="text">Detalles de la Receta</p>
+
+    <div class="mb-3 text-start">
+      <label class="form-label">Selecciona una categoria</label>
+      <select
+        class="form-select"
+        [(ngModel)]="TipoReceta"
+        name="tipoReceta"
+        required
+      >
+        <option *ngFor="let item of categorias" [value]="item">
+          {{ item }}
+        </option>
+      </select>
+    </div>
+    <!--boton que posteriormente se incluye su funcionalidad en el ts para que si hay categorías las indique-->
+    <button class="btn btn-primary w-100" (click)="GuardarElemento()">
+      Enviar
+    </button>
+  </form>
+</div>

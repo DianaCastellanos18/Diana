@@ -1,0 +1,14 @@
+<!--Si está definida la recetaDetalle se muestran todos sus detalles (nombre, categoria, area e intrucciones)-->
+<div *ngIf="recetaDetalle">
+  <h1 class="titulo mt-3">{{ recetaDetalle.strMeal }}</h1>
+  <div class="container">
+    <img
+      [src]="recetaDetalle.strMealThumb"
+      alt="{{ recetaDetalle.strMeal }}"
+      class="img-fluid"
+    />
+  </div>
+  <p><strong>Categoría:</strong> {{ recetaDetalle.strCategory }}</p>
+  <p><strong>Área de origen:</strong> {{ recetaDetalle.strArea }}</p>
+  <p><strong>Instrucciones:</strong> {{ recetaDetalle.strInstructions }}</p>
+</div>

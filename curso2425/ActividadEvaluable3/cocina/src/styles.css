@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+    background-color: rgb(209, 182, 146);
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}

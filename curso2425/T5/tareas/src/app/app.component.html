@@ -1,0 +1,63 @@
+<!--<div class="container">
+  <h1>app angular</h1>
+  <p>
+    esta es la primera aplicación angular realizada por {{ title }} para la
+    asignatura {{ asignatura }}. Por favor selecciona que componente quieres
+    ver:
+  </p>
+  <select class="form-select" [(ngModel)]="seleccion">
+    <option value="1">Conocimientos</option>
+    <option value="2">Asignatura</option>
+    <option value="3">Tecnologias</option>
+  </select>
+
+  <div [ngSwitch]="seleccion">
+    <app-listado *ngSwitchCase="'1'"></app-listado>
+    <app-asignaturas *ngSwitchCase="'2'"></app-asignaturas>
+    <app-tecnologias *ngSwitchCase="'3'"></app-tecnologias>
+    <p *ngSwitchDefault>por favor selecciona una opción</p>
+  </div>
+</div>-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="['/asignaturas', seleccion]"
+            >Asignaturas</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/tecnologias">Tecnologias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="navegar()">Listado</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<select [(ngModel)]="seleccion">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+</select>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
